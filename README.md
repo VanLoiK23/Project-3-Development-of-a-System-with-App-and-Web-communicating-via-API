@@ -1,6 +1,15 @@
-Developing system web-app sales phone via API:
+# Developing System: Web-App Sales Phone
 
-Result:
+## Overview
+A phone sales management system with web and mobile platforms.
+
+## Tech Stack
+- **Web Backend**: Java (Spring MVC Framework)
+- **Web API**: Spring REST Controller
+- **Android Frontend**: Kotlin (Jetpack Compose)
+- **API Integration**: Retrofit
+
+## Result
 
 *******************************************************Web*******************************************************:
 Login/Register:
