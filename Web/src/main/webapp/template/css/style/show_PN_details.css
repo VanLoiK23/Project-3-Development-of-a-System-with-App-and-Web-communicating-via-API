@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+body {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	background-color: #f4f7fa;
+	margin: 0;
+	padding: 0;
+}
+
+/* Form container */
+.modal-container {
+	width: 900px;
+	height: 550px;
+	background-color: #fff;
+	border-radius: 20px;
+	position: fixed;
+	top: 52%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #ffffff;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	padding: 30px;
+	z-index: 999999999999;
+	display: none;
+}
+
+.overplay-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	display: none;
+	z-index: 99999999999;
+}
+
+.modal-container .modal-header {
+	position: absolute;
+	top: -15px;
+	right: -15px;
+	cursor: pointer;
+	font-size: 20px;
+	width: 35px;
+	height: 35px;
+	background-color: red;
+	color: white;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 0px;
+	border: 2px solid white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Thông tin phiếu nhập */
+.modal-container .header h3 {
+	color: #007bff;
+	font-size: 24px;
+	text-align: center;
+	font-weight: 600;
+	margin-bottom: 30px;
+}
+
+.modal-container .info-row {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+
+.modal-container.info-row .form-group {
+	width: 23%;
+}
+
+/* Bảng thông tin phiếu nhập và chi tiết sản phẩm */
+.modal-container .table-container {
+	display: flex;
+	height: 60%;
+	margin-top: 20px;
+}
+
+.modal-container .info-table, .modal-container .product-table {
+	padding: 15px;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+	overflow-y: auto;
+}
+
+.modal-container .info-table {
+	width: 70%;
+	background-color: #f9f9f9;
+	max-height: 300px;
+
+	/* Giới hạn chiều cao bảng */
+}
+
+.modal-container .product-table {
+	width: 30%;
+	background-color: #f9f9f9;
+	margin-left: 15px;
+}
+
+/* Hover effect cho bảng */
+.modal-container .table td, .modal-container.table th {
+	text-align: center;
+	padding: 12px;
+	transition: background-color 0.3s ease;
+}
+
+.modal-container .table tr:hover {
+	background-color: #d6e9f8;
+	/* Màu khi hover */
+}
+
+.modal-container #table1 {
+	width: 920px !important;
+	scale: calc(1) !important;
+	min-width: 30px !important;
+}
+
+.modal-container #table2 {
+	width: 300px !important;
+	scale: calc(1) !important;
+	min-width: 30px !important;
+}
+
+.modal-container #table1 th {
+	width: 10px !important;
+}
+
+.modal-container #table2 th {
+	width: 20px !important;
+}
+
+.modal-container #table1 tr {
+	min-height: 3px !important;
+}
+
+.modal-container #table2 tr {
+	min-height: 3px !important;
+}
+
+.modal-container .table {
+	height: 50px !important;
+}
+
+/* Thanh trượt màu xanh */
+.modal-container .table-container::-webkit-scrollbar {
+	width: 8px;
+}
+
+.modal-container.table-container::-webkit-scrollbar-thumb {
+	background-color: #007bff;
+	border-radius: 10px;
+}
+
+.modal-container .table-container::-webkit-scrollbar-track {
+	background-color: #f1f1f1;
+}
+
+/* Màu sắc các tiêu đề */
+.modal-container h4 {
+	color: #007bff;
+	font-weight: 600;
+}
+
+/* Responsive */
+@media ( max-width : 768px) {
+	.modal-container {
+		width: 90%;
+		height: auto;
+		padding: 15px;
+	}
+	.modal-container .info-row .form-group {
+		width: 48%;
+		margin-bottom: 15px;
+	}
+	.modal-container .table-container {
+		flex-direction: column;
+	}
+	.modal-container .info-table, .modal-container .product-table {
+		width: 100%;
+		margin-bottom: 15px;
+	}
+}
+
+button {
+	border-radius: 6px !important;
+}

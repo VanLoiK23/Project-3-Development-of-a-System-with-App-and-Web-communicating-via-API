@@ -1,0 +1,56 @@
+/* Định dạng chung cho footer */
+.footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Phần nội dung footer */
+.footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Văn bản bên trong */
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Phần tên ứng dụng */
+.bigger-120 {
+    font-size: 16px;
+}
+
+/* Màu xanh dương cho chữ "Ace" */
+.blue.bolder {
+    color: #3498db;
+    font-weight: bold;
+}
+
+/* Căn chỉnh biểu tượng mạng xã hội */
+.action-buttons a {
+    text-decoration: none;
+    margin: 0 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover icon mạng xã hội */
+.action-buttons a:hover {
+    transform: scale(1.2);
+}
+
+/* Responsive cho màn hình nhỏ (mobile) */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

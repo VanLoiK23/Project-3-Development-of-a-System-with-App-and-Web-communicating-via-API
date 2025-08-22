@@ -1,0 +1,105 @@
+<%@include file="/common/taglib.jsp"%>
+<%@ page import="java.util.*"%>
+<c:url var="APIurl" value="/api-admin-new" />
+<c:url var="NewURL" value="/admin-new" />
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+
+<meta name="stylesheet"
+	content='
+		<link rel="stylesheet"
+			href="<c:url value='/template/css/style/quan_li_attribute_style.css' />" />
+	    ' />
+
+
+</head>
+
+<body>
+
+	<div class="main-content">
+	<c:if test="${not empty message}">
+			<script>
+				alert('${message}');
+			</script>
+		</c:if>
+
+
+    <section id="wrapper">
+     
+        <div class="p-4">
+            <div class="table" style="margin-top:50px;">
+                <div class="table-header">
+                    <button style="background:orange;scale:calc(0.9);"><a style="color:white"
+                            href="<c:url value='/quan-tri/donhang/danh-sach'/>"><i class="fa-solid fa-backward"></i></a></button>
+                    <p style="margin-right:30px">Lưu trữ</p>
+                    <p></p>
+                </div>
+                <div class="table-section">
+                    <table>
+                        <thread>
+                            <tr>
+                                <th style="width:60px">STT</th>
+                                <th style="width:140px">Mã phiếu xuất</th>
+                                <th>Khách hàng</th>
+                                <th>Điện thoại</th>
+                                <th>Tổng tiền</th>
+                                <th>Ngày tạo hóa đơn</th>
+                                <th style="width:110px">Hành động</th>
+                            </tr>
+                        </thread>
+                        <tbody id="trash_list">
+                            <c:choose>
+								<c:when test="${not empty model.listResult}">
+
+									<c:forEach var="item" items="${model.listResult}" varStatus="i">
+										<tr style='color: black'>
+											<td>${i.index + 1}</td>
+											<td>${item.id }</td>
+											<td
+												style='white-space: nowrap; overflow: hidden; text-overflow: ellipsis;'>${item.khachHangName}</td>
+
+											<td>${item.sdt}</td>
+											<td><fmt:formatNumber value="${item.tongTien}"
+													type="number" pattern="#,##0" /> đ</td>
+
+											<td><fmt:formatDate value="${item.thoiGian}"
+													pattern="dd-MM-yyyy" /></td>
+
+
+											<td>
+												<button>
+													<a style='color: white'
+														href='http://localhost:8080/Spring-mvc/quan-tri/donhang/reset/${item.id}'>
+														<i class='fa-solid fa-arrows-rotate'></i>
+													</a>
+												</button>
+											</td>
+										</tr>
+									</c:forEach>
+								</c:when>
+								<c:otherwise>
+									<tr style='border: 0'>
+										<td colspan='7' class='text-center'><span
+											style='color: gray; display: flex; justify-content: center'>Lưu
+												trữ rỗng.</span></td>
+									</tr>
+
+								</c:otherwise>
+							</c:choose>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+   </div>
+
+</body>
+
+</html>

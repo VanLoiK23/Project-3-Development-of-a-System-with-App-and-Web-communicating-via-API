@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+.phantrang {
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.phantrang li {
+	margin: 0 10px;
+}
+
+.phantrang li i {
+	font-size: 10px;
+}
+
+.fa-circle-check {
+	color: #006400 !important;
+	scale: calc(1.1);
+	text-shadow: 0 0 10px green;
+}
+
+.fa-circle-xmark {
+	color: #FF0000 !important;
+	scale: calc(1.1);
+	text-shadow: 0 0 10px red;
+}
+
+.btn-add {
+	background-color: #4CAF50;
+	color: white;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	position: relative;
+	margin-left: -250px;
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+}
+
+.btn-add:hover {
+	background-color: #45a049;
+	transform: translateY(-2px);
+}
+
+.btn-add:active {
+	background-color: #3e8e41;
+	transform: translateY(0px);
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/decorators">
+
+
+	<decorator name="web" page="web.jsp">
+		<pattern>/*</pattern>
+	</decorator>
+
+	<decorator name="admin" page="admin.jsp">
+		<pattern>/quan-tri*</pattern>
+	</decorator>
+
+	<decorator name="thankU" page="thankU.jsp">
+		<pattern>/Cart/thankyou</pattern>
+	</decorator>
+
+	<decorator name="login" page="login.jsp">
+		<pattern>/dang-nhap</pattern>
+	</decorator>
+
+	<decorator name="forgotPassword" page="forgotPassword.jsp">
+		<pattern>/send-Password-Reset</pattern>
+		<pattern>/reset-new-password</pattern>
+	</decorator>
+
+	<decorator name="register" page="register.jsp">
+		<pattern>/dang-ki</pattern>
+	</decorator>
+
+	<decorator name="404" page="404.jsp">
+		<pattern>/error/*</pattern>
+	</decorator>
+</decorators>

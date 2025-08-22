@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #ffffff 50%, #313348 50%);
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-container1 .table {
+    width: 100%;
+    background-color: #f5f5f5;
+    height: 450px;
+    border-radius: 25px;
+    transition: border-radius 0.5s ease-in-out;
+}
+
+.form-container1 .table-header button{
+    background-color:blue !important;
+    scale:calc(0.8) !important
+}
+
+.form-container1 .table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 35px;
+    transition: border-radius 0.5s ease-in-out;
+    background-color: rgb(240, 240, 240);
+}
+
+.form-container1 .table-header p {
+    color: #000000;
+    font-weight: 600;
+    font-size: 20px
+}
+
+.form-container1 button {
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 10px;
+    color: #ffffff;
+}
+
+.form-container1 .table-section {
+    height: 500px;
+    overflow: auto;
+}
+
+.form-container1 table {
+    width: 100%;
+    table-layout: fixed;
+    width: 750px;
+    border-collapse: collapse;
+}
+
+.form-container1 thread th {
+    position: sticky;
+    top: 0;
+    background-color: #f6f9fc;
+    color: #8493a5;
+    font-size: 15px;
+}
+
+.form-container1 th,
+td {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 20px;
+    word-break: break-all;
+    text-align: center;
+}
+
+.form-container1 tr:hover td {
+    color: #0298cf;
+    cursor: pointer;
+    background-color: #f6f9fc;
+}
+
+::placeholder {
+    color: #0298cf;
+}
+
+div::-webkit-scrollbar {
+    height: 12px;
+    width: 16px;
+}
+
+div::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+div::-webkit-scrollbar-thumb {
+    background-color: rgba(38, 185, 154, .88);
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+
+}
+
+.form-container1 {
+    position: fixed;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 0px;
+    width: 750px;
+    z-index: 999999999;
+    display: none;
+    height:450px
+}
+
+.overlay-background1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 9999;
+}
+
+.form-container1 .close-btn {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    background-color: #666;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    color: #666;
+}
+
+.form-container1 .close-btn:hover {
+    background-color: #f80000;
+    color: #333;
+}
+
+.form-container1 button {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    color: #ffffff;
+}
+
+.form-container1 .show {
+    scale: calc(0.8)
+}
+
+.form-container1 .close-btn i {
+    color: #f0f0f0
+}

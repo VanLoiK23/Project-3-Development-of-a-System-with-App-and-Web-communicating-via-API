@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.product, .cart-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.table-responsive {
+    margin-top: 20px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.cart-plus-minus {
+    display: flex;
+    align-items: center;
+}
+
+.cart-plus-minus button {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.cart-plus-minus input {
+    width: 50px;
+    text-align: center;
+    margin: 0 5px;
+}
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 1rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody + tbody {
+    border-top: 2px solid #dee2e6;
+}
+
+.table .pro-thumbnail img {
+    width: 100px;
+    height: 50px;
+}
+
+.cart-table {
+    margin-bottom: 2rem;
+}
+
+.cart-update-option {
+    margin-bottom: 2rem;
+}
+
+.cart-calculator-wrapper {
+    padding: 2rem;
+    border: 1px solid #dee2e6;
+}
+
+.cart-calculator-wrapper .table {
+    margin-bottom: 0;
+}
+
+.cart-calculator-wrapper .table td {
+    padding: 0.75rem 1rem;
+}

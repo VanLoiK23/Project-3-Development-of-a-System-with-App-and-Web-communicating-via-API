@@ -1,0 +1,474 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body,
+html {
+    min-width: 1024px;
+
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+.clear {
+    clear: both;
+    line-height: 0;
+}
+
+/* căn giữa section, và set độ rộng lớn nhất là 1200px */
+section {
+    max-width: 1205px;
+    margin: 0 auto;
+}
+
+hr {
+    color: #ddd;
+    background-color: #ddd;
+    border-top: 1px solid #ddd;
+}
+
+.flexContain {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+@media (max-width: 1200px) {
+    .contain-khungSanPham .sanPham:nth-child(5) {
+        display: none; /* Ẩn sản phẩm thứ 5 khi màn hình nhỏ */
+    }
+    
+}
+
+
+#product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.centered-item {
+    border:0 !important;
+    text-align: center;
+    margin-left:60px !important
+}
+.text-pro{
+    scale:calc(0.9);
+    margin-left:-130px
+}
+
+.circle-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    margin-bottom: 8px; /* Khoảng cách giữa icon và chữ */
+}
+
+.circle-icon i {
+    color: #fff;
+    font-size: 24px;
+    transition: transform 0.5s ease;
+}
+
+.circle-icon:hover {
+    border-radius: 0;
+}
+
+.circle-icon:hover i {
+    transform: rotate(360deg);
+}
+
+@media (max-width: 1500px) and (min-width: 1300px) {
+    .centered-item {
+        margin-left:260px !important;
+    }
+    .circle-icon{
+        margin-left:-50px !important;
+    }
+    .text-pro{
+        margin-left:-80px !important;
+    }
+}
+
+@media (max-width: 1300px) and (min-width: 1030px) {
+    .centered-item {
+        margin-left:160px !important;        
+    }
+    .circle-icon{
+        margin-left:-110px
+    }
+    .text-pro{
+        margin-left:-180px
+    }
+}
+
+@media (max-width: 1030px) {
+    #product-list {
+        grid-template-columns: repeat(2, 1fr); /* Chia thành 2 cột */
+    }
+    .centered-item {
+        margin-left:280px !important
+    }
+    .circle-icon{
+        margin-left:-80px
+    }
+    .text-pro{
+        margin-left:-180px
+    }
+}
+
+/* Use for auto clear float */
+/* ====== https://css-tricks.com/snippets/css/clear-fix/ ======== */
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+.group {
+    zoom: 1;
+    /* For IE 6/7 (trigger hasLayout) */
+}
+
+/* =========   Alert ===============*/
+#alert {
+    z-index: 200; /* luôn trên cùng (đè lên những thứ khác) */
+    display: block;
+    position: fixed;
+    bottom: 40px;
+    right: 5px;
+    padding: 20px;
+    background-color: #111;
+    opacity: 0;
+    color: white;
+    font-weight: bold;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+#closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+/* ===== End clear float ====== */
+
+#goto-top-page {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 100;
+    background: rgba(0, 0, 0, .2);
+    color: #fff;
+    font-size: 18px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition-duration: .2s;
+}
+#goto-top-page:hover {
+    background: rgba(0, 0, 0, .7);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+}
+
+/* ========= ScrollBar ============ */
+::-webkit-scrollbar {
+    width: .7em;
+    height: .7em;
+}
+
+::-webkit-scrollbar-track {
+    background: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #999;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #bbb;
+}
+
+/* ==================== css thêm , chưa sử dụng ========================= */
+/* tooltip https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_copy_clipboard2 */
+.tooltip {
+    position: absolute;
+    display: inline-block;
+    bottom: 5px;
+    right: 5px;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 21;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* animation ping from thegioididong */
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #f33;
+    border-radius: 100%;
+    display: block;
+}
+
+.dot .ping {
+    border: 1px solid #f33;
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+    background-color: rgba(238, 46, 36, .2);
+    border-radius: 100%;
+    -webkit-animation-duration: 1.25s;
+    animation-duration: 1.25s;
+    -webkit-animation-name: sonar;
+    animation-name: sonar;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    display: block;
+    margin: -1px 0 0 -1px;
+}
+
+@keyframes sonar {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+
+    100% {
+        -webkit-transform: scale(3);
+        transform: scale(3);
+        opacity: 0
+    }
+}
+.fa-star-half-stroke{
+    color:orange;
+}
+
+.pagination {
+	display: flex !important;
+	justify-content: flex-end !important;
+	width: 100% !important;
+	padding: 10px 20px !important;
+	    font-size: 10px !important;
+	
+}
+
+.pagination li {
+	padding: 7px;
+	border: 2px solid #d5d0d0;
+	height: 20px;
+	width: 10px;
+	border-radius: 100% !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #0298cf;
+	color: #ffffff;
+	box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+	margin: 0 5px;
+	cursor: pointer;
+	overflow:hidden;
+}
+
+.pagination a{
+	text-align:center !important;
+}
+
+.phantrang {
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.phantrang li {
+	margin: 0 15px;
+}
+
+.phantrang li i {
+	font-size: 3px;
+}
+
+li.active {
+	background-color: chartreuse !important;
+}
+
+.page-link {
+	padding: 7px;
+	border: 2px solid #d5d0d0;
+	height: 20px;
+	width: 10px;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #0298cf;
+	color: #ffffff;
+	box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+	margin: 0 5px;
+	cursor: pointer;
+}
+
+.page-item {
+	padding: 7px;
+	border: 2px solid #d5d0d0;
+	height: 20px;
+	width: 10px;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #0298cf;
+	color: #ffffff;
+	box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+	margin: 0 5px;
+	cursor: pointer;
+}
+
+.page-item.disabled .page-link {
+	color: #fff;
+	background-color: gray;
+}
+
+.page-item.active .page-link {
+	color: #fff;
+	background-color: chartreuse !important;
+}
+
+.page-link:hover {
+	color: #0056b3;
+	background-color: #e9ecef;
+	border-color: #dee2e6;
+}
+
+.page-link:focus {
+	box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+}
+
+
+.pagination li:nth-child(1),
+.pagination li:nth-child(2),
+.pagination li:last-child,
+.pagination li:nth-last-child(2){
+	border-radius: 50% !important;
+	padding: 5px 15px !important;
+	margin: 0 10px !important;
+	text-align:center;
+	
+}
+
+.pagination li:nth-child(1) a,
+.pagination li:nth-child(2) a,
+.pagination li:last-child a,
+.pagination li:nth-last-child(2) a{
+	text-align:center;
+		    display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.prev .page-link {
+	padding: 5px 15px !important;
+	border-radius: 50% !important;
+	background-color: #00B8D4;
+	margin-left:20px !important;
+	margin: 0 15px !important;
+}
+
+.first .page-link {
+	padding: 5px 15px !important;
+	border-radius: 50% !important;
+	background-color: #00B8D4;
+	margin-right:20px !important;
+	margin: 0 15px !important;
+}
+
+.next .page-link {
+	padding: 5px 15px !important;
+	border-radius: 50% !important;
+	background-color: #00B8D4;
+	margin: 0 15px !important;
+}
+
+.last .page-link {
+		padding: 5px 15px !important;
+	 border-radius : 50% !important;
+	background-color: #00B8D4;
+	border-radius: 50% !important;
+	margin: 0 15px !important;
+} 
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editor</title>
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.0/classic/ckeditor.js"></script>
+</head>
+<body style="margin: 0; padding: 10px;">
+    <textarea id="editor"></textarea>
+
+    <script>
+        let editorInstance;
+
+        ClassicEditor
+            .create(document.querySelector('#editor'))
+            .then(editor => {
+                editorInstance = editor;
+            })
+            .catch(error => {
+                console.error(error);
+            });
+
+        function setEditorData(content) {
+            if (editorInstance) {
+                editorInstance.setData(content);
+            }
+        }
+    </script>
+</body>
+</html>

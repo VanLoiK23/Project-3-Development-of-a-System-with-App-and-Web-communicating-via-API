@@ -1,0 +1,218 @@
+@charset "UTF-8";
+
+/* Plc */
+.plc {
+	background: #dae2dc;
+	/* overflow: hidden; */
+	font-size: 15px;
+	color: #333;
+	border-top: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+}
+
+.plc ul {
+	width: 100%;
+}
+
+.plc li {
+	width: 20%;
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 5px 10px;
+	line-height: 20px;
+	border-right: solid 1px #bbb;
+	margin: 5px 0;
+}
+
+.plc li:last-child {
+	border-right: none;
+}
+
+/* footer
+ */
+#footer {
+	margin-top: 50px;
+}
+
+#footer ul {
+	list-style-type: none;
+}
+
+#footer a {
+	text-decoration: none;
+	color:gray;
+}
+
+.pull-left {
+  float: none !important;
+}
+
+.footer-1, .absolute-footer {
+	display: flex;
+	justify-content: center;
+}
+
+.footer-1 .large-columns-3 {
+	display: flex ;
+	justify-content: space-between; /* hoặc: space-around / space-evenly */
+	gap: 150px; /* khoảng cách giữa các cột */
+}
+
+/* Footer wrapper */
+.footer-wrapper {
+	background-color: #f9fdfd;
+	padding: 40px 20px 0;
+	font-family: Arial, sans-serif;
+	color: #555;
+}
+
+/* Footer grid */
+.footer-widgets .row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+
+.footer-widgets .col {
+	flex: 1;
+	min-width: 250px;
+	margin-bottom: 20px;
+}
+
+.footer-widgets .widget-title {
+	font-weight: bold;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+.footer-widgets p, .footer-widgets ul {
+	margin: 0;
+	line-height: 1.6;
+}
+
+.footer-widgets ul {
+	padding: 0;
+	list-style: none;
+}
+
+.footer-widgets li {
+	margin-bottom: 8px;
+}
+
+.footer-widgets i {
+	margin-right: 8px;
+	color: #00cc99;
+}
+
+/* Phone call button */
+.fix_tel {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	background-color: #fff;
+	border-radius: 30px 30px 0 0;
+	padding: 5px 15px;
+	box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+	z-index: 999;
+}
+
+.footer-1 .large-columns-3 {
+	display: flex; /* biến container thành flex */
+	align-items: stretch; /* bắt tất cả các flex-items cùng chiều cao */
+	gap: 150px; /* khoảng cách giữa các cột */
+}
+
+/* Mỗi cột cũng thành flex container theo chiều dọc */
+.footer-1 .large-columns-3 .col {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Phần nội dung textwidget sẽ tự mở rộng đầy cao của .col */
+.footer-1 .large-columns-3 .textwidget {
+	flex: 1; /* chiếm hết không gian dọc của .col */
+	display: flex;
+	flex-direction: column; /* nếu cần căn các <p> theo column */
+	justify-content: flex-start;
+	/* hoặc space-between nếu bạn muốn rải đều */
+	padding: 0 10px; /* padding trong textwidget */
+}
+
+.fix_tel .tel a {
+	display: flex;
+	align-items: center;
+	font-weight: bold;
+	color: #f60;
+	font-size: 14px;
+	margin-left: 8px;
+}
+
+/* Footer bottom */
+.absolute-footer {
+	background-color: #222;
+	color: #fff;
+	text-align: center;
+	padding: 20px 10px;
+}
+
+.footer-primary {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.footer-nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 15px;
+	gap: 15px;
+}
+
+.footer-nav li a {
+	color: #fff;
+	font-weight: bold;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.footer-nav li a:hover {
+	text-decoration: underline;
+}
+
+.copyright-footer {
+	font-size: 13px;
+	color: #999;
+}
+
+.copyright-footer img {
+	max-height: 34px;
+	margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1300px) {
+	.plc li {
+		width: 80%;
+	}
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+	.footer-widgets .row {
+		flex-direction: column;
+	}
+	.footer-widgets .col {
+		max-width: 100%;
+	}
+	.fix_tel {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.footer-nav {
+		flex-direction: column;
+		gap: 10px;
+	}
+}

@@ -1,0 +1,176 @@
+@media ( min-width : 1200px) {
+	.container, .container-lg, .container-md, .container-sm, .container-xl {
+		max-width: 1200px;
+	}
+}
+
+@media ( min-width : 992px) {
+	.container, .container-lg, .container-md, .container-sm {
+		max-width: 1200px;
+	}
+}
+
+@media ( min-width : 900px) {
+	.container, .container-md, .container-sm {
+		max-width: 1200px;
+	}
+}
+
+@media ( min-width : 800px) AND (max-width:899px) {
+	.container, .container-md, .container-sm {
+		max-width: 1600px;
+		margin-left: -50px;
+		margin-bottom: 100px;
+	}
+	#checkout-mess {
+		margin-bottom: 50px !important;
+	}
+}
+
+@media ( min-width : 768px) AND (max-width:799px) {
+	.container, .container-md, .container-sm {
+		max-width: 1400px;
+		margin-left: -150px;
+		margin-bottom: 100px;
+	}
+	#checkout-mess {
+		margin-bottom: 100px !important;
+	}
+}
+
+@media ( min-width : 578px) AND (max-width:767px) {
+	.container, .container-md, .container-sm {
+		max-width: 1400px;
+		margin-left: -150px;
+		margin-bottom: 100px;
+	}
+	#checkout-mess {
+		margin-bottom: 200px !important;
+	}
+}
+
+@media ( max-width :577px) {
+	.container, .container-md, .container-sm {
+		max-width: 800px;
+		margin-left: 0px;
+		margin-bottom: 100px;
+	}
+	.checkbox-form {
+		margin-top: 200px
+	}
+	#re {
+		margin-left: 250px !important;
+	}
+	#checkout-mess {
+		margin-bottom: 150px !important;
+	}
+	.checkout-area .col-custom {
+		margin-top: 40px;
+		width: 400px;
+		scale: calc(1.8);
+		margin-left: 50px;
+	}
+	.checkout-form-list {
+		width: 200px !important
+	}
+	.col-md-12 {
+		width: 900px !important;
+	}
+	#checkout-mess {
+		margin-bottom: 650px !important;
+		margin-left: -100px;
+		width: 576px;
+		height: 100px !important;
+	}
+	#note {
+		color: black;
+		font-size: 25px;
+		margin-left: -90px
+	}
+	.footer {
+		margin-top: 300px !important;
+	}
+}
+
+@media ( max-width : 500px) {
+	.checkbox-form {
+		margin-top: 600px
+	}
+	.checkout-area .col-custom {
+		margin-top: 40px;
+		width: 300px !important;
+		scale: calc(1.8);
+		margin-left: 50px;
+	}
+	.your-order h3 {
+		width: 200px !important;
+	}
+	.footer {
+		margin-top: 1100px !important;
+	}
+	#checkout-mess, #note {
+		margin-left: -55px
+	}
+	#check {
+		height: 300px !important;
+		margin-left: 0px !important;
+	}
+}
+
+@media ( max-width : 400px) {
+	.your-order {
+		margin-left: -20px !important;
+		width: 550px !important
+	}
+}
+
+.discount-container {
+	width: 90%;
+	max-width: 400px;
+	margin: 20px 0;
+}
+
+/* Label styling */
+.discount-label {
+	font-size: 18px;
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 8px;
+	display: block;
+}
+
+/* Custom Select styling */
+.discount-select {
+	width: 100%;
+	padding: 12px;
+	font-size: 16px;
+	border-radius: 8px;
+	border: 1px solid #ccc;
+	appearance: none;
+	background: white;
+	color: #555;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	background-image:
+		url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/svgs/solid/caret-down.svg');
+	background-position: right 12px center;
+	background-repeat: no-repeat;
+}
+
+/* Hover effect for Select */
+.discount-select:hover {
+	border-color: #007bff;
+	color: #007bff;
+}
+
+/* Optional: Style the dropdown options */
+.discount-select option {
+	padding: 10px;
+	font-size: 16px;
+	color: #333;
+}
+
+@media ( max-width :600px) {
+	.form-group i {
+		font-size: 14px !important;
+	}
+}

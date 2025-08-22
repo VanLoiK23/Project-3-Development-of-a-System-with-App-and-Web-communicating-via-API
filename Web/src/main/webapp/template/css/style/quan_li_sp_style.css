@@ -1,0 +1,363 @@
+@import
+	url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+	font-family: "Poppins", sans-serif;
+	background: linear-gradient(135deg, #ffffff 50%, #313348 50%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#wrapper .table {
+	width: 100%;
+	background-color: #f5f5f5;
+	height: 650px;
+	border-radius: 35px;
+	transition: border-radius 0.5s ease-in-out;
+}
+
+#wrapper .table-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 20px;
+	border-radius: 35px;
+	transition: border-radius 0.5s ease-in-out;
+	background-color: rgb(240, 240, 240);
+}
+
+#wrapper .table-header p {
+	color: #000000;
+	font-weight: 600;
+	font-size: 20px
+}
+
+#wrapper button {
+	outline: none;
+	border: none;
+	border-radius: 6px !important;
+	cursor: pointer;
+	padding: 10px;
+	color: #ffffff;
+}
+
+td button:nth-child(1) {
+	background-color: #ca57ff;
+}
+
+.pagination {
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.pagination li {
+	margin: 0 10px;
+}
+
+.pagination li i {
+	font-size: 10px;
+}
+
+.fa-circle-check {
+	color: #006400 !important;
+	scale: calc(1.1);
+	text-shadow: 0 0 10px green;
+}
+
+.fa-circle-xmark {
+	color: #FF0000 !important;
+	scale: calc(1.1);
+	text-shadow: 0 0 10px red;
+}
+
+.btn-add {
+	background-color: #4CAF50;
+	color: white;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	position: relative;
+	margin-left: -250px;
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+}
+
+.btn-add:hover {
+	background-color: #45a049;
+	transform: translateY(-2px);
+}
+
+.btn-add:active {
+	background-color: #3e8e41;
+	transform: translateY(0px);
+}
+
+.poppins-regular {
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+td button:nth-child(2) {
+	background-color: #0298cf;
+}
+
+td button:nth-child(3) {
+	background-color: #f80000;
+}
+
+.pagination {
+	display: flex !important;
+	justify-content: flex-end !important;
+	width: 100% !important;
+	padding: 10px 20px !important;
+}
+
+.pagination li {
+	padding: 10px;
+	border: 2px solid #d5d0d0;
+	height: 40px;
+	width: 30px;
+	border-radius: 100% !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #0298cf;
+	color: #ffffff;
+	box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+	margin: 0 5px;
+	cursor: pointer;
+}
+
+.add_new {
+	padding: 10px 20px;
+	color: #ffffff;
+	background-color: #0298cf;
+}
+
+#wrapper input {
+	padding: 10px 20px;
+	margin: 0 10px;
+	outline: none;
+	border: 1px solid #0298cf;
+	border-radius: 6px;
+	color: #0298cf;
+}
+
+#wrapper .table-section {
+	height: 500px;
+	overflow: auto;
+}
+
+#wrapper table {
+	width: 100%;
+	table-layout: fixed;
+	min-width: 900px;
+	border-collapse: collapse;
+}
+
+#wrapper thread th {
+	position: sticky;
+	top: 0;
+	background-color: #f6f9fc;
+	color: #8493a5;
+	font-size: 15px;
+}
+
+#wrapper th, td {
+	border-bottom: 1px solid #dddddd;
+	padding: 10px 20px;
+	word-break: break-all;
+	text-align: center;
+}
+
+td img {
+	height: 60px;
+	width: 60px;
+	object-fit: cover;
+	border-radius: 15px;
+	border: 5px solid #ced0d2;
+}
+
+tr:hover td {
+	color: #0298cf;
+	cursor: pointer;
+	background-color: #f6f9fc;
+}
+
+::placeholder {
+	color: #0298cf;
+}
+
+div::-webkit-scrollbar {
+	height: 12px;
+	width: 16px;
+}
+
+div::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+div::-webkit-scrollbar-thumb {
+	background-color: rgba(38, 185, 154, .88);
+	border-radius: 20px;
+	border: 6px solid transparent;
+	background-clip: content-box;
+}
+
+.trash-count {
+	position: absolute;
+	top: -5px;
+	right: -10px;
+	background-color: red;
+	color: white;
+	border-radius: 50%;
+	padding: 2px 6px;
+	font-size: 12px;
+	font-weight: bold
+}
+
+.bt-trash {
+	position: absolute;
+	right: 50px;
+	background-color: #66cc66;
+}
+
+.bt-trash:hover {
+	background-color: #55aa55;
+}
+
+th {
+	text-align: center !important;
+}
+
+.phantrang {
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.phantrang li {
+	margin: 0 10px;
+}
+
+.phantrang li i {
+	font-size: 10px;
+}
+
+li.active {
+	background-color: chartreuse !important;
+}
+
+.page-link {
+	padding: 10px;
+	border: 2px solid #d5d0d0;
+	height: 40px;
+	width: 30px;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #0298cf;
+	color: #ffffff;
+	box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+	margin: 0 5px;
+	cursor: pointer;
+}
+
+.page-item {
+	padding: 15px;
+	border: 2px solid #d5d0d0;
+	height: 40px;
+	width: 30px;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #0298cf;
+	color: #ffffff;
+	box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+	margin: 0 5px;
+	cursor: pointer;
+}
+
+.page-item.disabled .page-link {
+	color: #fff;
+	background-color: gray;
+}
+
+.page-item.active .page-link {
+	color: #fff;
+	background-color: chartreuse !important;
+}
+
+.page-link:hover {
+	color: #0056b3;
+	background-color: #e9ecef;
+	border-color: #dee2e6;
+}
+
+.page-link:focus {
+	box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+}
+
+
+.pagination li:nth-child(1),
+.pagination li:nth-child(2),
+.pagination li:last-child,
+.pagination li:nth-last-child(2){
+	border-radius: 50% !important;
+	padding: 10px 30px !important;
+	margin: 0 10px !important;
+}
+
+.prev .page-link {
+	padding: 10px 30px !important;
+	border-radius: 50% !important;
+	background-color: #00B8D4;
+	margin-left:20px !important;
+	margin: 0 15px !important;
+}
+
+.first .page-link {
+	padding: 10px 30px !important;
+	border-radius: 50% !important;
+	background-color: #00B8D4;
+	margin-right:20px !important;
+	margin: 0 15px !important;
+}
+
+.next .page-link {
+	padding: 10px 30px !important;
+	border-radius: 50% !important;
+	background-color: #00B8D4;
+	margin: 0 15px !important;
+}
+
+.last .page-link {
+	padding: 10px 30px !important; border-radius : 50% !important;
+	background-color: #00B8D4;
+	border-radius: 50% !important;
+	margin: 0 15px !important;
+} 
+
+
+#search:not(:placeholder-shown) ~ #pagination {
+    display: none !important;
+}
+
+/* CSS khi tên sản phẩm đã tồn tại */
+input.error {
+    background-color: red; /* Màu nền đỏ nhạt để báo lỗi */
+}
+

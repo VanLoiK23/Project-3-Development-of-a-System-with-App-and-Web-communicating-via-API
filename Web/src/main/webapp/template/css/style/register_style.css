@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*Tong kich thuoc cua border and padding  */
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    /*hien thi nam ngang */
+    justify-content: center;
+    /*xac dinh cac sap xep cua phan tu con theo huong chinh cua container */
+    align-items: center;
+    min-height: 100vh; 
+    background: url("https://i.ibb.co/LDWzyDFn/88fc954a0a6166e92422cddf58c482c6.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    user-select: none;
+}
+
+.container {
+    width: 660px;
+    white-space: nowrap;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    /*lam mo phan nen*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    height: 820px;
+    transform: scale(0.8);
+}
+
+.flatpickr-calendar {
+    z-index: 9999;
+}
+
+.btn {
+    margin-top: 30px;
+    width: 60%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    /*hieu ung bong do 0 dich chuyen truc x 0 y 0 10px kich thuoc bog*/
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+
+}
+
+.bt {
+    display: flex;
+    justify-content: center;
+    /* căn giữa theo chiều ngang */
+    align-items: center;
+    margin-top: 30px;
+}
+
+.name {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    margin-top: 20px;
+}
+
+.name i {
+    position: absolute;
+    right: 60px;
+    top: 45%;
+    transform: translateY(-50%);
+    /*thay doi vi tri bang cach dich chuyen theo vi tri cot doc*/
+}
+
+.pass i {
+    position: absolute;
+    right: 60px;
+    top: 45%;
+    transform: translateY(-50%);
+}
+
+.pass {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.sdt i {
+    position: absolute;
+    right: 60px;
+    top: 45%;
+    transform: translateY(-50%);
+}
+
+.sdt {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+input,
+select {
+    background: transparent;
+    border: none;
+    outline: none;
+    /*vien xung quanh */
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    /*bo tron goc*/
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+input {
+    width: 100%;
+    height: 100%;
+}
+
+input::-ms-value {
+    color: #fff
+}
+
+h2 {
+    font-size: 36px;
+    text-align: center;
+}
+
+input::placeholder {
+    color: #fff
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+select {
+    font-family: Arial, sans-serif;
+    /* Kiểu font */
+    font-style: italic;
+    /* Kiểu nghiêng của font */
+    text-transform: uppercase;
+    /* Chuyển tất cả chữ thành chữ in hoa */
+}
+
+select:hover {
+    color: pink
+}
+
+select {
+    width: 80px;
+    height: 40px;
+    padding: 0px 5px 0px 10px;
+}
+
+select option:hover {
+    background-color: #555;
+    /* Màu nền khi hover */
+    color: #fff;
+    /* Màu văn bản khi hover */
+}
+
+select option {
+    background-color: #333;
+    /* Màu nền */
+    color: #fff;
+    /* Màu văn bản */
+    padding: 10px 20px;
+    /* Khoảng cách nội dung */
+}
+
+.sex {
+    width: 300px;
+    height: 40px;
+    padding: 0px 45px 0px 10px;
+    font-size: 14px;
+}
+
+.h {
+    text-align: center;
+}
+
+.name input {
+    width: 284px;
+}
+
+.date .day {
+    font-size: 13px;
+    position: relative;
+    bottom: 10px;
+}
+
+.date select {
+    width: 185px
+}
+
+.female {
+    border: 1px solid white;
+    border-radius: 30px;
+    background: transparent;
+    border: none;
+    outline: none;
+    /*vien xung quanh */
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    /*bo tron goc*/
+    font-size: 16px;
+    color: #fff;
+    padding: -10px 45px 20px 20px;
+    position: relative;
+    top: 10px;
+    width: 185px;
+    height: 30px;
+    left: -10px;
+    height: 40px
+}
+
+.female input {
+    width: 14px;
+
+}
+
+.female p {
+    padding-left: 10px
+}
+
+.day {
+    position: relative;
+    bottom: 10px;
+    top: 10px;
+}
+
+.p {
+    line-height: 35px;
+}
+
+.input1 {
+    color: white;
+    position: relative;
+    top: -35px;
+    left: 140px
+}
+
+.female1 {
+    position: relative;
+    top: -30px;
+    left: 180px
+}
+
+.female2 {
+    position: relative;
+    top: -70px;
+    left: 370px
+}
+
+.input2 {
+    color: white;
+    position: relative;
+    top: -20px;
+    left: 140px
+}
+
+.input3 {
+    color: white;
+    position: relative;
+    top: -20px;
+    left: 140px
+}
+
+.tk {
+    position: relative;
+    top: 30px;
+    left: 200px
+}
+
+i {
+    scale: calc(1.1)
+}
+
+@media (max-width:870px) {
+    body {
+        min-height: 120vh
+    }
+
+    .container {
+        margin-left: 70px;
+        scale: calc(1.3)
+    }
+}
+
+@media (max-width:1040px) AND (min-width:1000px) {
+    .container {
+        scale: calc(1.6) !important
+    }
+}
+
+@media (max-width:767px) {
+    body {
+        min-height: 120vh
+    }
+
+    .container {
+        margin-left: 50px
+    }
+}
+
+@media (max-width:700px) {
+    body {
+        min-height: 400vh
+    }
+
+    .container {
+        margin-left: 2000px;
+        width: 1200px !important;
+        scale: calc(5.0) !important
+    }
+}
+
+@media (max-width:570px) {
+    body {
+        min-height: 400vh
+    }
+
+    .container {
+        margin-left: 1700px;
+        width: 1200px !important;
+        scale: calc(4.5) !important
+    }
+}
+
+@media (max-width:500px) {
+    body {
+        min-height: 400vh
+    }
+
+    .container {
+        margin-left: 1500px;
+        width: 1200px !important;
+        scale: calc(4.0) !important
+    }
+}
+
+@media (max-width:450px) {
+    body {
+        min-height: 400vh
+    }
+
+    .container {
+        margin-left: 1300px;
+        width: 1200px !important;
+        scale: calc(3.5) !important;
+    }
+}
+
+@media (max-width:380px) {
+    body {
+        min-height: 400vh
+    }
+
+    .container {
+        margin-left: 1270px;
+        width: 800px !important;
+        scale: calc(3.5) !important;
+    }
+}

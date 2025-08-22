@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+.form {
+	display: grid !important;
+}
+
+#edit_sp .table {
+	height: 1300px !important
+}
+
+#Desc .table {
+	min-width: 300px !important;
+	height: 200px !important
+}
+
+.note-editor {
+	max-width: 950px !important;
+}
