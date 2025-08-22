@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editor</title>
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.0/classic/ckeditor.js"></script>
+</head>
+<body style="margin: 0; padding: 10px;">
+    <textarea id="editor"></textarea>
+
+    <script>
+        let editorInstance;
+
+        ClassicEditor
+            .create(document.querySelector('#editor'))
+            .then(editor => {
+                editorInstance = editor;
+
+                // Lắng nghe sự kiện thay đổi nội dung
+                editorInstance.model.document.on('change:data', () => {
+                    const editorData = editorInstance.getData();
+                    // Gửi dữ liệu về Android
+                    if (window.TextListener) {
+                        window.TextListener.onTextChanged(editorData);
+                    }
+                });
+            })
+            .catch(error => {
+                console.error(error);
+            });
+
+        // Hàm để cập nhật dữ liệu cho editor từ Android
+        function setEditorData(content) {
+            if (editorInstance) {
+                editorInstance.setData(content);
+            }
+        }
+    </script>
+</body>
+</html>
